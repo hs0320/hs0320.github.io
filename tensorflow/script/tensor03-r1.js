@@ -11,7 +11,7 @@ async function track_face() {
     while(1) {
         
         const predictions = await model.estimateFaces(frame, returnTensors);
-        ctx.drawImage(frame, 0, 0, 320, 240);
+        ctx.drawImage(frame, 0, 0, 160, 120);
     
         if(predictions.length > 0) {
         
