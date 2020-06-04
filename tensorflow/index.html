@@ -11,8 +11,13 @@
     <title>tensor-sample03</title>
 </head>
 <body>
-    <video width=180 height=320 autoplay muted playsinline id="camera"></video>
-    <canvas width=180 height=320 id="myCanvas"></canvas>
+    <canvas id="myCanvas"></canvas>
+    <video autoplay muted playsinline id="camera" style="
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        /* visibility: hidden; */
+        width: auto;
+        height: auto;"></video>
     <script src="script/tensor03-r1.js"></script>
 </body>
 </html>

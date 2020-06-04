@@ -11,7 +11,7 @@ async function track_face() {
     while(1) {
         
         const predictions = await model.estimateFaces(frame, returnTensors);
-        ctx.drawImage(frame, 0, 0, 180, 320);
+        ctx.drawImage(frame, 0, 0, 180, 135);
     
         if(predictions.length > 0) {
         
@@ -52,7 +52,11 @@ async function track_face() {
     function webcam() {
         var camera = document.getElementById("camera");
         var media = navigator.mediaDevices.getUserMedia({
-        video: true
+        video: {
+            facingMode: 'user',
+            width: 180,
+            height: 135
+        },
         // audio: false,
         });
     
