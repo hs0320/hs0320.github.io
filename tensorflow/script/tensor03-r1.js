@@ -16,7 +16,7 @@ async function track_face() {
         if(predictions.length > 0) {
         
             for(let i = 1; i < predictions[0].scaledMesh.length - 1; i++) {
-                // ctx.clearRect();
+                // ctx.clearRect
 
                 s = i - 1
                 e = i + 1
