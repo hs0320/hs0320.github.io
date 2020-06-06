@@ -5,6 +5,7 @@ async function track_face() {
     
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
+    canvas.style = `width: 180px; height: 135px`;
     ctx.translate(180, 0);
     ctx.scale(-1, 1);
     
@@ -13,12 +14,11 @@ async function track_face() {
     while(1) {
         
         const predictions = await model.estimateFaces(frame, returnTensors);
-        ctx.drawImage(frame, 0, 0, 179, 134, 0, 0, 180, 135);
+        ctx.drawImage(frame, 0, 0, 180, 135, 0, 0, 180, 135);
 
         if(predictions.length > 0) {
         
             for(let i = 1; i < predictions[0].scaledMesh.length - 1; i++) {
-                // ctx.clearRect
 
                 s = i - 1
                 e = i + 1
