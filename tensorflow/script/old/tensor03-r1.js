@@ -5,7 +5,6 @@ async function track_face() {
     
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
-    // canvas.style = `width: 180px; height: 135px`;
     canvas.width = frame.videoWidth;
     canvas.height = frame.videoHeight;
     ctx.translate(canvas.width, 0);
@@ -16,8 +15,6 @@ async function track_face() {
     while(1) {
         
         const predictions = await model.estimateFaces(frame, returnTensors);
-        // ctx.drawImage(frame, 0, 0, 180, 135, 0, 0, 180, 135);
-        // ctx.drawImage(frame, 0, 0, 180, 135);
         ctx.drawImage(frame, 0, 0, canvas.width, canvas.height);
 
         if(predictions.length > 0) {
