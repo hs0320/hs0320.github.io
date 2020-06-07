@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
+    <title>tensorflow-body01</title>
+</head>
+<body>
+    <video autoplay muted playsinline id="camera" style="
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: auto;
+    height: auto;
+    "></video>
+    <img src="HIRANAI.jpeg" id="image" crossorigin='anonymous'/>
+    <canvas id="myCanvas"></canvas>
+    <script src="script/tensor-body01.js"></script>
+    
+</body>
+</html>
