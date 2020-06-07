@@ -3,8 +3,8 @@ async function track_body() {
     const frame = document.getElementById("image"),
           canvas = document.getElementById("myCanvas"),
           net = await bodyPix.load();
-    frame.crossOrigin = "anonymous";
-    frame.onerror = myImgErrorHandler;
+    // frame.crossOrigin = "anonymous";
+    // frame.onerror = myImgErrorHandler;
     console.log(net);
     const segmentation = await net.segmentPerson(frame);
         //   maskBackground = true,
