@@ -40,8 +40,8 @@ function webcam() {
     var media = navigator.mediaDevices.getUserMedia({
         video: {
             facingmode: 'user',
-            // width: 180,
-            // height: 135
+            width: 180,
+            height: 135
         },
     });
     media.then((stream) => {
