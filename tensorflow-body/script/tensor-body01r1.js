@@ -32,6 +32,7 @@ async function track_body() {
             );
             
         console.log("complete");
+        await tf.nextFrame();
     }
 }
 

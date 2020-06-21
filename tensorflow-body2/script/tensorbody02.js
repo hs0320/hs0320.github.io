@@ -23,13 +23,13 @@ async function track_body() {
 
           while(1) {
               const segmentation = await net.segmentPerson(frame);
-              console.log(segmentation);
+            //   console.log(segmentation);
               
               
               const foregroundColor = {r: 0, g: 0, b: 0, a: 0},
               backgroundColor = {r: 0, g: 0, b: 0, a: 255},
               backgroundDarkeningMask = bodyPix.toMask(segmentation, foregroundColor, backgroundColor);
-              console.log(backgroundDarkeningMask);
+            //   console.log(backgroundDarkeningMask);
               
               // globalCompositeOperationの初期値状態を保存
               ctx.save();
@@ -44,7 +44,8 @@ async function track_body() {
               // globalCompositeOperationの初期値状態に戻す。次処理のために。
               ctx.restore();
               
-              console.log("complete");
+            //   console.log("complete");
+            await tf.nextFrame();
             }
         }
         
