@@ -1,8 +1,10 @@
 window.addEventListener('load', init);
 
 function init() {
-    const width = 940;
-    const height = 560;
+    // const width = 940;
+    // const height = 560;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
     const renderer = new THREE.WebGLRenderer({
         canvas: document.querySelector('#myCanvas')
     });
@@ -35,7 +37,7 @@ function init() {
     const edges = new THREE.EdgesGeometry(geometry);
 
     for( var i = 0; i < boxnum; i++ ){
-        box[i] = new THREE.LineSegments( edges, new THREE.LineBasicMaterial({ color: 0x4f524f }));
+        box[i] = new THREE.LineSegments( edges, new THREE.LineBasicMaterial({ color: 0x313331 }));
         // box.position.set(0, 0, 0);
         // box[i].position.set(Math.random()*800-250, Math.random()*800-250, Math.random()*1500-250);
         box[i].position.set(Math.random()*1000-700, Math.random()*1000-0, Math.random()*1500-250);

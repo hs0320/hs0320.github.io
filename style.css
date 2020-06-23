@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+
 .webgl {
     position: fixed;
     z-index: -1;
@@ -8,8 +10,20 @@
 .wrapper {
     color: #ffffff;
     margin: auto;
+    font-family: 'Caveat', cursive;;
+}
+
+.wrapper h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+.wrapper h3 {
+    margin-top: 0;
 }
 
 .wrapper a {
     color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    padding-right: 0.1rem;
 }
